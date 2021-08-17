@@ -1,0 +1,14 @@
+스프링 시큐리티 Spring Security
+
+시큐리티 세션
+Authentication 객체가 들어있다.
+Authentication 객체 안에는 UserDetails 타입과 OAuth2User 타입이 들어갈 수 있다.
+1. UserDetails
+  - 일반 로그인
+2. OAuth2User
+  - Google, Facebook 등...
+
+문제 1. 일반 로그인 했을 때와 OAuth 로그인 했을 때 처리가 복잡해진다.
+  - 하나의 클래스를 만들어서 UserDetails와 OAuth2User를 상속받는다.
+  - PrincipalDetails가 UserDetails를 상속받는데, OAuth2User도 상속받아서 사용하면 된다.
+
